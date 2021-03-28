@@ -138,8 +138,9 @@ for (i=0;i<xdata.length;i++){
     if(xdata[i].Titre==document.getElementById("search").value){
       
         var h1z = document.querySelectorAll(".h1z");
-     h1z[0].innerHTML+="<tr>"+"<td>"+xdata[i].Titre+"</td>"+"<td>"+xdata[i].date_exposé+"</td>"+"<td>"+xdata[i].Réailiser+"</td>"+"<td>"+xdata[i].line+"</td>"+"</tr>"
-     
+      h1z[1].innerHTML+="<tr>"+"<td>"+xdata[i].Titre+"</td>"+"<td>"+xdata[i].date_exposé+"</td>"+"<td>"+xdata[i].Réailiser+"</td>"+"<td>"+xdata[i].line+"</td>"+"</tr>"
+    
+ 
     }
     
    

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,14 +65,16 @@
   <div class="row">
     <div class="col-lg-7">
       <div class="home-content">
-        <form   class="text-muted" id="form" method="POST">
+        <form   class="text-muted" id="form" method="GET" action="http://localhost:3000/myform">
+      
+          
           <div class="form-row">
             <div class="col form-group">
                 <label >Titre :</label>
             </div>
             <div class="col form-group">
              <input type="text" name="Titre" class="form-control" id="Titre" />
-             <label class="ero" id="Erour1"></label>
+             
             </div>
           </div>
           <div class="form-row">
@@ -78,8 +82,8 @@
                   <label>nome :</label>
               </div>
               <div class="col form-group">
-               <input type="text" name="name" class="form-control" id="name" />
-          <label class="ero" id="Erour2"></label>
+               <input type="text" name="Réailiser" class="form-control" id="name" />
+         
                
               </div>
             </div>
@@ -90,8 +94,8 @@
               </div>
               
               <div class="col form-group">
-                <input type="date" name="date" class="form-control" id="date" />
-                <label class="ero" id="Erour2"></label>
+                <input type="date" name="date_exposé" class="form-control" id="date" />
+                
       
 
             </div>
@@ -101,12 +105,13 @@
                   <label>line:</label>
               </div>
               <div class="col form-group">
-                <input type="text" name="link" class="form-control" id="link" />
-                <label class="ero" id="ErourY"></label>
+                <input type="text" name="line" class="form-control" id="link" />
+               
             </div>
             </div>
           <div class="text-center">
-            <button class="btn btn-outline-danger btn-block mb-5" type="submit"  id="post-btn" >Send Message</button>
+            <button class="btn btn-outline-danger btn-block mb-5" type="submit"   id="post-btn" >Send Message</button>
+            
           </div>
         </form> 
       </div>
@@ -236,34 +241,5 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- main -->
 
-
-<script src="./js/main.js">
-
-
-  
- 
-  
-</script>
-<script>
-var post =document.getElementById("post-btn");
-
-  
-post.addEventListener("click",function(){
-    event.preventDefault();
-   
-var xReq ={ Titre:"documen",Tiname:"documen",Tihhk:"documen",
-
-      Titre:document.getElementById('Titre').value ,
-      name: document.getElementById('name').value,
-      date:document.getElementById('date').value ,
-      link:document.getElementById('link').value 
-    }
-    var myJSON = JSON.stringify(xReq);
-
-       console.log(myJSON);
-       document.forms[0].reset();
-    
-});
-</script>
 </body>
 </html>

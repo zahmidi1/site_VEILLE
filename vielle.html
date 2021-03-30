@@ -144,7 +144,7 @@
  <section class="about-section" >
     
 
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <input class="form-control" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search..">
   <br>
   <div class="table-responsive  table-striped ">
     <table class="table ">
@@ -203,14 +203,64 @@
  
  <!--  end footer -->
   <script>
-    $(document).ready(function(){
-      $("#myInput").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#myTable tr").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-      });
-    });
+   
+
+    function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+
+
+
+var ok =document.getElementById("ok");
+
+var h1z = document.querySelectorAll(".h1z");
+
+  var pageNum=1;
+
+ok.addEventListener("click",function(){
+    var xReq = new XMLHttpRequest();
+xReq.open('get','veille'+ pageNum +'.json');
+xReq.onload = function(){
+var xdata =JSON.parse(xReq.responseText);
+
+       addHtml(xdata);
+};
+    pageNum++;
+xReq.send();
+
+});
+
+
+function addHtml(xdata){
+    
+        var a,b;
+        for (i=0; i<xdata.length; i++){
+            a +="<tr>"+"<td>"+xdata[i].Titre+"</td>"+"<td>"+xdata[i].date_exposé+"</td>"+"<td>"+xdata[i].Réailiser+"</td>"+"<td>"+xdata[i].line+"</td>"+"<tr>";
+            b+="<br>"+xdata[i].Titre+xdata[i].date_exposé+"<br>"+xdata[i].Réailiser+xdata[i].line+"</br>";
+
+          }
+         h1z[0].insertAdjacentHTML('beforeend',a);
+         h1z[1].insertAdjacentHTML('beforeend',b);
+
+}
+
     </script>
   
 <!-- Jquery -->
@@ -219,7 +269,7 @@
 <script src="js/popper.min.js"></script>
  <!-- Bootstrap -->
 <script src="js/bootstrap.min.js"></script>
-<!-- main -->
-<script src="js/main.js"></script>
+
+
 </body>
 </html>

@@ -14,31 +14,19 @@ body{
   outline: none;
   
 }
+
+
+
+
 a{
   text-decoration: none!important;
 }
-.logo-circle{
-  height: 26px;
-  width: 26px;
-  border: 4px solid #ffffff;
-  display: inline-block;
-  margin-bottom: -2px;
-  border-radius: 50%;
-  position: relative;
+.logo{
+  height: 50px;
+  width: 140px;
+  
 }
-.logo-circle::before{
-  content: '';
-  height: 8px ;
-  width: 8px;
-  background-color: #ffffff;
-  border-radius: 50% ;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -4px;
-  margin-top: -4px;
 
-}
 .header{
   border-bottom:2px solid rgba(255, 255, 255, 0.2) ;
 }
@@ -100,7 +88,8 @@ opacity: 0.6;
 @media (max-width: 983px) {
   .gg{
   margin-top: 300PX;
-  }}
+  }
+}
 .home-section .home-content h1{
 font-size: 55px;
 color: #ffffff;

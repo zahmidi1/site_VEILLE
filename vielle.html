@@ -24,7 +24,7 @@
 <header class="header fixed-top">
   <div class="container">
     <nav class="navbar navbar-expand-md  navbar-light">
-      <a class="navbar-brand" href="#"><span class="logo-circle"></span> LOGO</a>
+      <a class="navbar-brand" href="#"><img class="logo" src="./img/logofinal.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -172,13 +172,11 @@
     <div class="row justify-content-center">
       <div class="col-lg-6">
        <div class="footer-logo">
-         <a href="#"><span class="logo-circle"></span> LOGO</a>
+         <a href="#"><img class="logo" src="./img/logofinal.png" alt=""></a>
        </div>
        <div class="footer-text">
          <p>
-           Cher lecteur,
-           je suis étudiant au centre Solicode.
-           et j’ai trouve la péddarogie active 
+          Ensemble, nous préparons l’avenir digital de Tanger !
          </p> 
          
        </div>
@@ -208,9 +206,13 @@
     function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
+
   filter = input.value.toUpperCase();
+
   table = document.getElementById("myTable");
+
   tr = table.getElementsByTagName("tr");
+
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
     if (td) {
@@ -252,12 +254,13 @@ function addHtml(xdata){
     
         var a,b;
         for (i=0; i<xdata.length; i++){
-            a +="<tr>"+"<td>"+xdata[i].Titre+"</td>"+"<td>"+xdata[i].date_exposé+"</td>"+"<td>"+xdata[i].Réailiser+"</td>"+"<td>"+xdata[i].line+"</td>"+"<tr>";
-            b+="<br>"+xdata[i].Titre+xdata[i].date_exposé+"<br>"+xdata[i].Réailiser+xdata[i].line+"</br>";
+            a +="<tr>"+"<td>"+xdata[i].Titre+"</td>"+"<td>"+xdata[i].date_exposé+"</td>"+"<td>"+xdata[i].Réailiser+"</td>"+"<td>" +xdata[i].line>+"</td>"+"<tr>";
+          
 
           }
          h1z[0].insertAdjacentHTML('beforeend',a);
-         h1z[1].insertAdjacentHTML('beforeend',b);
+     
+
 
 }
 

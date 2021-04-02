@@ -229,7 +229,6 @@
 
 
 
-
 var ok =document.getElementById("ok");
 
 var h1z = document.querySelectorAll(".h1z");
@@ -254,15 +253,17 @@ function addHtml(xdata){
     
         var a,b;
         for (i=0; i<xdata.length; i++){
-            a +="<tr>"+"<td>"+xdata[i].Titre+"</td>"+"<td>"+xdata[i].date_exposé+"</td>"+"<td>"+xdata[i].Réailiser+"</td>"+"<td>" +xdata[i].line>+"</td>"+"<tr>";
-          
+            a +="<tr>"+"<td>"+xdata[i].Titre+"</td>"+"<td>"+xdata[i].date_exposé+"</td>"+"<td>"+xdata[i].Réailiser+"</td>"+"<td>"+xdata[i].line+"</td>"+"<tr>";
+            b+="<br>"+xdata[i].Titre+xdata[i].date_exposé+"<br>"+xdata[i].Réailiser+xdata[i].line+"</br>";
 
           }
          h1z[0].insertAdjacentHTML('beforeend',a);
-     
-
+         h1z[1].insertAdjacentHTML('beforeend',b);
 
 }
+
+
+
 
     </script>
   

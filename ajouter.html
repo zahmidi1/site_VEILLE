@@ -65,7 +65,7 @@
   <div class="row">
     <div class="col-lg-7">
       <div class="home-content">
-        <form   class="text-muted" id="form" method="GET" action="http://localhost:3000/myform">
+        <form class="text-muted" id="form" method="GET" action="http://localhost:3000/myform">
       
           
           <div class="form-row">
@@ -73,7 +73,7 @@
                 <label >Titre :</label>
             </div>
             <div class="col form-group">
-             <input type="text" name="Titre" class="form-control" id="Titre" />
+             <input type="text" name="Titre" class="form-control" id="Titre" required />
              
             </div>
           </div>
@@ -82,7 +82,7 @@
                   <label>nome :</label>
               </div>
               <div class="col form-group">
-               <input type="text" name="Réailiser" class="form-control" id="name" />
+               <input type="text" name="Réailiser" class="form-control" id="name" required />
          
                
               </div>
@@ -94,7 +94,7 @@
               </div>
               
               <div class="col form-group">
-                <input type="date" name="date_exposé" class="form-control" id="date" />
+                <input type="date" name="date_exposé" class="form-control" id="date" required />
                 
       
 
@@ -102,15 +102,15 @@
           </div>
             <div class="form-row">
               <div class="col form-group">
-                  <label>line:</label>
+                  <label>Lien:</label>
               </div>
               <div class="col form-group">
-                <input type="text" name="line" class="form-control" id="link" />
+                <input type="text" name="line" class="form-control" id="link" required pattern="http:\/\/(*)s" placeholder="http://" />
                
             </div>
             </div>
           <div class="text-center">
-            <button class="btn btn-outline-danger btn-block mb-5" type="submit"   id="post-btn" >Send Message</button>
+            <button class="btn btn-outline-danger btn-block mb-5" type="submit"   id="post-btn" >ajouter</button>
             
           </div>
         </form> 

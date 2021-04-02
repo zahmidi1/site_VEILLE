@@ -338,3 +338,12 @@ border: sienna solid 2px;
  animation: plus 3S linear infinite  ;
 }
 /* end ajouter  */
+input:focus:invalid{
+  border-color: #ff0000;
+  box-shadow: 0px 0px 10px #ff0000;
+}
+input:focus:valid{
+  border-color: #56c93f;
+  box-shadow: 0px 0px 10px #56c93f;
+  
+}
